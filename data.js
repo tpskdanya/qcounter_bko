@@ -1,15 +1,15 @@
 const salaryData = {
-  "Волгоград": {
+  "Белгород": {
     "Junior Sales Expert": 185,
     "Sales Expert": 217,
     "Senior Sales Expert": 261
   },
-  "Волжский": {
+  "Курск": {
     "Junior Sales Expert": 185,
     "Sales Expert": 217,
     "Senior Sales Expert": 261
   },
-  "Астрахань": {
+  "Старый Оскол": {
     "Junior Sales Expert": 185,
     "Sales Expert": 217,
     "Senior Sales Expert": 261
