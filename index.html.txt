@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <title>Q.Counter</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="style.css?v=3.1"/>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(reg => {
+            reg.update();
+            console.log('SW registered');
+          });
+      });
+    }
+  </script>
+</head>
+<body>
+  <div class="page">
+    <div class="panel">
+      <h1 class="title">Калькулятор зарплаты <span class="beta">:)</span></h1>
+      
+      <div class="glass-block">
+        <label class="big">Город:</label>
+        <select id="city"></select>
+      </div>
+      <div class="glass-block">
+        <label class="big">Грейд:</label>
+        <select id="grade"></select>
+      </div>
+      <div class="glass-block">
+        <label class="big">Формат точки:</label>
+        <select id="format">
+          <option value="BR">BR</option>
+          <option value="MAU">MAU</option>
+        </select>
+      </div>
+
+      <!-- БЛОК ЧАСЫ -->
+<div class="glass-block hours-block">
+  <h3 class="hours-title">Часы</h3>
+  
+  <div class="hours-grid">
+    <div class="hours-col">
+      <label>с обедом</label>
+      <input id="hoursWith" type="number" min="0" step="0.5" placeholder="0"/>
+    </div>
+    <div class="hours-col">
+      <label>без обеда</label>
+      <input id="hoursWithout" type="number" min="0" step="0.5" placeholder="0"/>
+    </div>
+    <div class="hours-col">
+      <label>буферные*</label>
+      <input id="hoursBuffer" type="number" min="0" step="0.5" placeholder="0"/>
+    </div>
+  </div>
+
+  <p class="hours-hint">
+    *в буферные вписываем брифы, обучение, праздничные и т.д.
+  </p>
+</div>
+
+      <h2 class="kpi-title">KPI</h2>
+      <p class="hint">Оставь пустым, если KPI не используется.</p>
+
+      <!-- KPI блоки без изменений -->
+      <div class="kpi-row">
+        <div class="glass-block block kpi-block">
+          <label class="kpi-label">KPI 1</label>
+          <div class="kpi-inputs">
+            <input id="w1" type="number" min="0" max="100" placeholder="Вес %"/>
+            <input id="v1" type="number" min="0" step="0.1" placeholder="% выполнения"/>
+          </div>
+        </div>
+        <div class="glass-block block kpi-block">
+          <label class="kpi-label">KPI 2</label>
+          <div class="kpi-inputs">
+            <input id="w2" type="number" min="0" max="100" placeholder="Вес %"/>
+            <input id="v2" type="number" min="0" step="0.1" placeholder="% выполнения"/>
+          </div>
+        </div>
+      </div>
+      <div class="kpi-row">
+        <div class="glass-block block kpi-block">
+          <label class="kpi-label">KPI 3</label>
+          <div class="kpi-inputs">
+            <input id="w3" type="number" min="0" max="100" placeholder="Вес %"/>
+            <input id="v3" type="number" min="0" step="0.1" placeholder="% выполнения"/>
+          </div>
+        </div>
+        <div class="glass-block block kpi-block">
+          <label class="kpi-label">KPI 4</label>
+          <div class="kpi-inputs">
+            <input id="w4" type="number" min="0" max="100" placeholder="Вес %"/>
+            <input id="v4" type="number" min="0" step="0.1" placeholder="% выполнения"/>
+          </div>
+        </div>
+      </div>
+
+      <div id="weightNote" class="note" style="display:none;"></div>
+
+      <div class="result-block">
+        <div class="result-row"><div class="res-label">Ставка/час:</div><div id="rate" class="res-val">—</div></div>
+        <div class="result-row"><div class="res-label">Оклад:</div><div id="oklad" class="res-val">—</div></div>
+        <div class="result-row"><div class="res-label">Бонус:</div><div id="bonus" class="res-val">—</div></div>
+        <div class="result-row total"><div class="res-label">Итого:</div><div id="total" class="res-val">—</div></div>
+      </div>
+     </div>
+    <div class="footer">
+    <a href="https://t.me/tpskdanya" target="_blank" class="prod-by">
+      prod by tpskdanya
+    </a>
+  </div>
+
+  <script src="data.js?v=3"></script>
+  <script src="script.js?v=2.2"></script>
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="back.mp4?v=1.4" type="video/mp4">
+  </video>
+</body>
+</html>
