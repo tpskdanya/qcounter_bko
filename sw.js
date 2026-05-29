@@ -1,4 +1,4 @@
-const CACHE_NAME = 'q-counter-v3.6.2';
+const CACHE_NAME = 'q-counter-v4';
 const urlsToCache = [
   '/',
   '/index.html',
