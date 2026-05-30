@@ -2,21 +2,21 @@
   "name": "Q Counter",
   "short_name": "QCounter",
   "description": "Калькулятор зарплаты",
-  "start_url": "/Q_Counter/",
+  "start_url": "/qcounter_bko/",
   "display": "standalone",
   "background_color": "#cfeff4",
   "theme_color": "#111",
   "icons": [
     {
-      "src": "/Q_Counter/icon-192.png",
+      "src": "/qcounter_bko/icon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/Q_Counter/icon-512.png",
+      "src": "/qcounter_bko/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
-  "scope": "/Q_Counter/"
+  "scope": "/qcounter_bko/"
 }
