@@ -1,4 +1,4 @@
-const CACHE_NAME = 'q-counter-v3.0.1';
+const CACHE_NAME = 'q-counter-v4';
 const urlsToCache = [
   '/qcounter_bko/',
   '/qcounter_bko/index.html',
