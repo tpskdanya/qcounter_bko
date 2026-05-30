@@ -1,13 +1,13 @@
 const CACHE_NAME = 'q-counter-v3.0.1';
 const urlsToCache = [
-  '/Q_Counter/',
-  '/Q_Counter/index.html',
-  '/Q_Counter/style.css',
-  '/Q_Counter/script.js',
-  '/Q_Counter/data.js',
-  '/Q_Counter/MyFont.ttf',
-  '/Q_Counter/icon-192.png',
-  '/Q_Counter/icon-512.png'
+  '/qcounter_bko/',
+  '/qcounter_bko/index.html',
+  '/qcounter_bko/style.css',
+  '/qcounter_bko/script.js',
+  '/qcounter_bko/data.js',
+  '/qcounter_bko/MyFont.ttf',
+  '/qcounter_bko/icon-192.png',
+  '/qcounter_bko/icon-512.png'
 ];
 
 self.addEventListener('install', event => {
@@ -37,7 +37,7 @@ self.addEventListener('fetch', event => {
       .then(response => {
         if (response) return response;
         return fetch(event.request).catch(() => {
-          return caches.match('/Q_Counter/index.html');
+          return caches.match('/qcounter_bko/index.html');
         });
       })
   );
